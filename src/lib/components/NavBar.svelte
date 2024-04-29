@@ -5,7 +5,7 @@
 </script>
 
 <nav
-	class="sticky left-0 right-0 top-0 m-auto flex w-screen items-center justify-between bg-gray-100 p-4 text-lg dark:bg-zinc-900/50"
+	class="sticky left-0 right-0 top-0 m-auto flex w-screen items-center justify-between bg-gray-200/50 p-4 text-lg dark:bg-zinc-900/50"
 >
 	<div class="flex items-center">
 		<NavBarButton href="/">Riley Spires</NavBarButton>
