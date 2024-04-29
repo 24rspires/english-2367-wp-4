@@ -1,6 +1,5 @@
 <script lang="ts">
 	import ModeToggle from './ModeToggle.svelte';
-	import { Button } from '$lib/components/ui/button';
 	import NavBarButton from './NavBarButton.svelte';
 </script>
 
