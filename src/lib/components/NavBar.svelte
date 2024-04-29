@@ -14,7 +14,10 @@
 		<NavBarButton href="/intro">Intro</NavBarButton>
 		<NavBarButton href="/growth">Growth</NavBarButton>
 		<NavBarButton href="/donts">Do(n't)s</NavBarButton>
+		<NavBarButton href="/experts">Experts</NavBarButton>
 		<NavBarButton href="/conclusion">Conclusion</NavBarButton>
+		<NavBarButton href="/workscited">Works Cited</NavBarButton>
+		<NavBarButton href="/memo">Writer's Memo</NavBarButton>
 		<ModeToggle />
 	</div>
 </nav>
