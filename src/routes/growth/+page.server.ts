@@ -2,6 +2,8 @@ import type { PageServerLoad } from '../$types';
 import * as fs from 'fs';
 
 export const load: PageServerLoad = async () => {
+	const test = fs.readFileSync(process.cwd() + '/components.json', 'utf-8');
+
 	const writerGrowths = fs
 		.readFileSync(process.cwd() + '/static/growth-writer.txt', 'utf-8')
 		.split('\n');
