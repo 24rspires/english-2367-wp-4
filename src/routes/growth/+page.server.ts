@@ -2,8 +2,12 @@ import type { PageServerLoad } from '../$types';
 import * as fs from 'fs';
 
 export const load: PageServerLoad = async () => {
-	const writerGrowths = fs.readFileSync('./src/lib/static/growth-writer.txt', 'utf-8').split('\n');
-	const editorGrowths = fs.readFileSync('./src/lib/static/growth-editor.txt', 'utf-8').split('\n');
+	const writerGrowths = fs
+		.readFileSync(process.cwd() + '/src/lib/static/growth-writer.txt', 'utf-8')
+		.split('\n');
+	const editorGrowths = fs
+		.readFileSync(process.cwd() + '/src/lib/static/growth-editor.txt', 'utf-8')
+		.split('\n');
 
 	let writerWordCount = 0;
 	let editorWordCount = 0;
