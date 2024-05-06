@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Button } from "$lib/components/ui/button"; 
+	import { fade } from "svelte/transition";
 
 	export let data;
 
@@ -24,10 +25,12 @@
 		{#each intro as line}
 			<p class="text-md">{line}</p>
 		{/each}
-		<Button variant="outline" on:click={showWordCount} class="m-8"> 
-			<p class="text-s">
-				{shownCount}
-			</p>
+		<Button variant="outline" on:click={showWordCount} class="m-8">
+			{#key shownCount}
+				<p class="text-s" in:fade={{duration: 500}}>
+					{shownCount}
+				</p>
+			{/key}
 		</Button>
 	</div>
 </main>
