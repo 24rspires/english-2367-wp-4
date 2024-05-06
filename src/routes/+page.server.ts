@@ -2,7 +2,7 @@ import type { PageServerLoad } from './$types';
 import * as fs from 'fs';
 
 export const load: PageServerLoad = async ({}) => {
-	const intro = fs.readFileSync(process.cwd() + '/src/lib/static/intro.txt', 'utf-8').split('\n');
+	const intro = fs.readFileSync(process.cwd() + '/static/intro.txt', 'utf-8').split('\n');
 
 	let wordCount = 0;
 

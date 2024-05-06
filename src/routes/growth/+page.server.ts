@@ -3,10 +3,10 @@ import * as fs from 'fs';
 
 export const load: PageServerLoad = async () => {
 	const writerGrowths = fs
-		.readFileSync(process.cwd() + '/src/lib/static/growth-writer.txt', 'utf-8')
+		.readFileSync(process.cwd() + '/static/growth-writer.txt', 'utf-8')
 		.split('\n');
 	const editorGrowths = fs
-		.readFileSync(process.cwd() + '/src/lib/static/growth-editor.txt', 'utf-8')
+		.readFileSync(process.cwd() + '/static/growth-editor.txt', 'utf-8')
 		.split('\n');
 
 	let writerWordCount = 0;
