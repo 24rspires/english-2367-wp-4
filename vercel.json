@@ -1,6 +1,6 @@
 {
 	"functions": {
-		"/+page.server.ts": {
+		"src/routes/+page.server.ts": {
 			"includeFiles": "./static/intro.txt"
 		}
 	}
