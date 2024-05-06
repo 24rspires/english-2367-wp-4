@@ -1,0 +1,7 @@
+{
+	"functions": {
+		"/+page.server.ts": {
+			"includeFiles": "./static/intro.txt"
+		}
+	}
+}
