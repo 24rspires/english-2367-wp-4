@@ -5,6 +5,6 @@
 	export let href: string;
 </script>
 
-<Button variant="outline" class={$page.url.pathname === href ? "dark:text-purple-500 text-purple-800" : ""} on:click={() => (window.location.href = href)}>
+<Button variant="outline" class={$page.url.pathname === href ? "bg-purple-500" : ""} on:click={() => (window.location.href = href)}>  
 	<slot />
 </Button>
