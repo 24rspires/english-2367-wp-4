@@ -10,9 +10,15 @@
 	const finalWordCount = '1,146';
 
 	let finalDisplay = 'Reveal final word count';
+	let sentenceDisplay = 'Reveal sentence count';
 
-	const displayFinalcount = () => {
+	const displayFinalCount = () => {
 		finalDisplay = `${finalWordCount} words`;
+	};
+
+	const displaySentenceCount = () => {
+		const sentenceCount = memo.join('').split(/\./).length;
+		sentenceDisplay = `${sentenceCount} sentences`;
 	};
 </script>
 
@@ -26,6 +32,14 @@
 				<SvelteMarkdown source={line} isInline={true} />
 			{/each}
 		</div>
+
+		<Button variant="outline" class="m-6" on:click={displaySentenceCount}>
+			{#key sentenceDisplay}
+				<p in:blur={{}}>
+					{sentenceDisplay}
+				</p>
+			{/key}
+		</Button>
 
 		<h2 class="mt-16 font-bold">Works Cited</h2>
 
@@ -44,7 +58,7 @@
 			</div>
 		</ul>
 
-		<Button variant="outline" class="my-8" on:click={displayFinalcount}>
+		<Button variant="outline" class="my-8" on:click={displayFinalCount}>
 			{#key finalDisplay}
 				<p in:scale={{}}>
 					{finalDisplay}
