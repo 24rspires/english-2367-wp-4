@@ -1,11 +1,9 @@
 import type { PageServerLoad } from './$types';
 import introAsset from '$lib/static/intro.txt';
-import { read } from '$app/server';
+import { readFile } from '$lib/utils';
 
 export const load: PageServerLoad = async ({}) => {
-	const introData = read(introAsset);
-
-	const intro = (await introData.text()).split('\n');
+	const intro = await readFile(introAsset);
 
 	let wordCount = 0;
 

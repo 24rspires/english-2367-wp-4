@@ -1,14 +1,11 @@
 import type { PageServerLoad } from '../$types';
-import { read } from '$app/server';
+import { readFile } from '$lib/utils';
 import writerAsset from '$lib/static/growth-writer.txt';
 import editorAsset from '$lib/static/growth-editor.txt';
 
 export const load: PageServerLoad = async () => {
-	const writerGrowthsData = read(writerAsset);
-	const editorGrowthsData = read(editorAsset);
-
-	const writerGrowths = (await writerGrowthsData.text()).split('\n');
-	const editorGrowths = (await editorGrowthsData.text()).split('\n');
+	const writerGrowths = await readFile(writerAsset);
+	const editorGrowths = await readFile(editorAsset);
 
 	let writerWordCount = 0;
 	let editorWordCount = 0;
