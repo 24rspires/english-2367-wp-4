@@ -1,6 +1,6 @@
 import type { PageServerLoad } from './$types';
-import introAsset from '$lib/static/intro.txt';
 import { readFile } from '$lib/utils';
+import introAsset from '$lib/static/texts/intro.txt';
 
 export const load: PageServerLoad = async ({}) => {
 	const intro = await readFile(introAsset);

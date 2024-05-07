@@ -1,7 +1,7 @@
 import type { PageServerLoad } from '../$types';
 import { readFile } from '$lib/utils';
-import writerAsset from '$lib/static/growth-writer.txt';
-import editorAsset from '$lib/static/growth-editor.txt';
+import writerAsset from '$lib/static/texts/growths/growth-writer.txt';
+import editorAsset from '$lib/static/texts/growths/growth-editor.txt';
 
 export const load: PageServerLoad = async () => {
 	const writerGrowths = await readFile(writerAsset);
