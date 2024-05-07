@@ -2,7 +2,6 @@ import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { cubicOut } from 'svelte/easing';
 import type { TransitionConfig } from 'svelte/transition';
-import { read } from '$app/server';
 
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
@@ -54,10 +53,4 @@ export const flyAndScale = (
 		},
 		easing: cubicOut
 	};
-};
-
-export const readFile = async (fileAsset: string): Promise<string[]> => {
-	const fileData = read(fileAsset);
-
-	return (await fileData.text()).split('\n');
 };

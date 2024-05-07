@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-import { readFile } from '$lib/utils';
+import { readFile } from '$lib/server/utils';
 import introAsset from '$lib/static/texts/intro.txt';
 
 export const load: PageServerLoad = async ({}) => {

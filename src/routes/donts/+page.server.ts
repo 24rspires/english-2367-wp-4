@@ -1,7 +1,7 @@
 import type { PageServerLoad } from '../$types';
 import dosAsset from '$lib/static/texts/do(nts)/dos.txt';
 import dontsAsset from '$lib/static/texts/do(nts)/donts.txt';
-import { readFile } from '$lib/utils';
+import { readFile } from '$lib/server/utils';
 
 export const load: PageServerLoad = async () => {
 	const dos = await readFile(dosAsset);

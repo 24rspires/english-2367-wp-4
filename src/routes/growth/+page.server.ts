@@ -1,5 +1,5 @@
 import type { PageServerLoad } from '../$types';
-import { readFile } from '$lib/utils';
+import { readFile } from '$lib/server/utils';
 import writerAsset from '$lib/static/texts/growths/growth-writer.txt';
 import editorAsset from '$lib/static/texts/growths/growth-editor.txt';
 
