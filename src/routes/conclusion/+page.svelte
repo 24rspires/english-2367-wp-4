@@ -3,10 +3,9 @@
 	import { fade } from 'svelte/transition';
 
 	export let data;
+	const { conclusion, wordCount } = data;
 
 	let shownCount = 'Reveal word count';
-
-	const { conclusion, wordCount } = data;
 
 	const showWordCount = () => {
 		shownCount = `${wordCount} words`;
